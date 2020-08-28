@@ -1,0 +1,25 @@
+NÃO É UTILIZADO PELO PROGRAMA, É SÓ PRA LEMRAR ALGUMA COISA, É UM Contador NA PAGINA
+
+import React, {useState} from 'react'; //useState => Função do react para criar um estado
+//import Header from './Header'
+
+//Componentes => função q retorna html, css e JS, e.g. app, é um bloco isolado
+//Propriedade => informações que um componente pai passa para um componente filho, eg title
+//Estado => Informações mantidas pelo componente
+
+function App() {
+const [counter, setCounter] = useState(0); //Tem q usar pra atualizar o valor
+
+function incrementCounter(){
+  setCounter(counter + 1); //Quem atualiza é a função q criamos setCounter, pq as variaveis no react ñ mudadm
+}
+
+  return (
+    <>
+      <h1>Contador: {counter} </h1>
+      <button onClick={incrementCounter}>Incrementar</button>
+    </> //Fragment, ele divide cada um
+  );
+}
+
+export default App;
